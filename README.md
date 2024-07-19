@@ -1,6 +1,6 @@
 These are basic scripts for running Ray.io with slurm
-
-To run, try the following
+<br> 
+To run, try the following<br>
 ```#pull the container image```
 ```apptainer pull docker://container-image  //your/output-file.sif```
 ```#example: apptainer pull docker://rayproject/ray:latest-gpu $MYDATA/ray_latest-gpu.sif```
@@ -15,7 +15,7 @@ To run, try the following
 ```#you can check the cluster is up by running```
 ```#which runs ray status inside the container```
 ```check.sh```
-
+<br>
 One item - right now, you'll want to modify the times / partitions in each `*.sbatch` file to better match your environment and what you want to do.
-
+<br>
 To use, once you've edited the files to match your environment, submit `start-head.sbatch` to slurm.  Once the job starts running, run one of the `*-worker.sbatch` files to run a Ray worker which will connect to the ray head.  You can submit the workers multiple times to get more GPUs.
