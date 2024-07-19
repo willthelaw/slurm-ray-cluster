@@ -1,7 +1,13 @@
 #!/bin/bash
 
+#set this to the path to your container image
+#to pull a new container, for example, do:
+#apptainer pull docker://rayproject/ray:latest-gpu
+#which will create a file called ray_latest-gpu.sif
+#in your current working directory
 export CONTAINER_IMAGE_FILE=$MYDATA/ray_latest-gpu.sif
 
+#use "computer english"
 export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
 
