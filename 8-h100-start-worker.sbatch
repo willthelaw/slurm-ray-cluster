@@ -8,9 +8,14 @@
 
 ### Give all resources on each node to a single Ray task, ray can manage the resources internally
 #SBATCH --ntasks-per-node=1
+#may want to switch to 8 tasks and 1 gpu per task
 #SBATCH --gpus-per-task=8
-SBATCH --constraint=h100
-#SBATCH --cpus-per-task=8
+#ask for H100s specifically
+#SBATCH --constraint=h100
+#systems have 112 cores, so 14 cpus per gpu
+#SBATCH --cpus-per-task=112
+#request all memory available on the node
+#SBATCH --mem=2000000
 
 
 #get head node
